@@ -526,6 +526,13 @@
   transform: translateY(-5px);
 }
 
+.testimonial-card.faded {
+  box-shadow: none !important;
+  border: 1.5px solid rgba(200,200,200,0.15); /* subtle faded border */
+  border-radius: 2.67rem;
+  background: var(--background-grey);
+}
+
 .star-rating {
   margin-bottom: 1.5rem;
 }
@@ -583,6 +590,22 @@
 
 .testimonials-more {
   text-align: center;
+  margin-top: 3rem;
+}
+
+/* When faded cards are present (not showAll), move the button up */
+.testimonials:not(.show-all) .testimonials-more {
+  margin-top: -3rem;
+}
+
+/* If you can't add a class to the section, use a more general selector: */
+.testimonials-more {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.testimonials-more.faded {
+  margin-top: -4rem;
 }
 
 .see-more-btn {
@@ -606,6 +629,18 @@
   box-shadow:
     -8px -8px 16px var(--white),
     8px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-fade-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 150%; /* Increased from 50% to 80% for a stronger fade */
+  pointer-events: none;
+  border-radius: 0 0 2.67rem 2.67rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--background-grey, #f2f2f2) 70%);
+  z-index: 2;
 }
 
 /* Download Section */
