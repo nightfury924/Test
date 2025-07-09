@@ -165,7 +165,7 @@ const TestimonialsSection = () => {
                 )
             )}
           </div>
-        </div>
+         </div>
         <div className="testimonials-more">
           <Button
             variant="seeMore"
